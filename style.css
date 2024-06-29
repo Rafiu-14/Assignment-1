@@ -1,16 +1,33 @@
 *{
-    margin-right: 0 auto;
-    margin-left: 0 auto;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.banner-section img{
+.banner-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-section img {
     width: 1100px;
     border-radius: 16px;
-    border-radius: 16px;
-    background: linear-gradient(180deg, #070211 0%, rgba(7, 2, 17, 0.00) 100%),url(resources/Banner\ Image.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: brightness(50%);
+}
+
+.banner-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1100px;
+    height: 500px;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 5) 0%, rgba(0, 0, 0, 0) 40%);
+    pointer-events: none; /* Ensures that the overlay does not interfere with click events on the image */
 }
 
 .banner-title{
@@ -20,17 +37,17 @@
     transform: translate(-50%, -50%); 
     text-align: center;
 
-    color: #FFF;
+    color: #e0e0e0;
     text-align: center;
     font-family: 'Merriweather', serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 900;
-    line-height: 95px; /* 131.944% */
+    line-height: 95px;
 }
 
 .banner-title h3{
-    color: #FFF;
+    color: #e0e0e0;
     text-align: center;
     font-family: Merriweather;
     font-size: 32px;
@@ -94,6 +111,7 @@
 .img-1{
     width: 1300px;
     fill: linear-gradient( #070211 0%, rgba(7, 2, 17, 0.00) 100%);
+    filter: brightness(50%);
 }
 
 .overlay-img{
@@ -201,7 +219,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
+    
     border-radius: 8px;
     background: #F00;
     border: none;
@@ -213,12 +231,19 @@
 }
 
 /* .circle{
+    position: relative;
     display: flex;
     width: 463px;
     height: 463px;
     border: 10px #F00 solid;
     border-radius: 50%;
 } */
+
+.sub-container-2{
+    border: 10px solid red;
+    border-radius: 100%;
+    
+}
 
 .sub-container-1 h3{
     color: #F00;
@@ -257,6 +282,7 @@
 }
 
 .sub-container-3{
+    text-align: center;
     top: 30%;
 }
 .sub-container-3 p{
@@ -274,7 +300,12 @@
     width: 140px;
     height: 140px;
     left: 10%;
+    margin-left: 50%;
 }
+
+/* .holiday-sale{
+    background-color: #F00;
+} */
 
 .title{
     margin-right: 0 auto;
@@ -405,7 +436,37 @@
 
 footer{
     background: #070211;
-    width: 1600px;
+    width: 100%;
     height: 609px;
     color: #FFF;
+}
+
+footer .Num-web{
+    display: flex;
+    margin-left: 50%;
+}
+
+footer .Num-web .number {
+    color: #e0e0e0;
+    font-size: 16px;
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+footer .Num-web .website{
+    color: #e0e0e0;
+    font-size: 16px;
+    margin-left: auto; 
+    margin-right: 0;
+
+}
+
+footer .social-icon {
+    display: flex;
+    justify-content: center;
+}
+
+footer .last-text {
+    display: flex;
+    justify-content: space-between;
 }
